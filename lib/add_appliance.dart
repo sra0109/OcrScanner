@@ -10,14 +10,14 @@ class AddAppliance extends StatelessWidget {
         backgroundColor: Colors.black,
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 18.0),
+            padding: EdgeInsets.only(right: 18.0, left: 18.0),
             child: Icon(Icons.clear),
           )
         ],
         title: const Center(
           child: Text(
             'ADD APPLIANCE',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
       ),

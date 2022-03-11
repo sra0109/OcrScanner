@@ -67,55 +67,99 @@ class _DataContentState extends State<DataContent> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('Data Content Page'),
+        title: const Center(
+            child: Text('SmartHQ',
+                style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold))),
         backgroundColor: Colors.black,
       ),
+      backgroundColor: Colors.black45,
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(height: 30),
             const Text(
               'Network',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: TextField(
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
                 controller: networkController,
-                decoration: const InputDecoration(border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white)),
+                    border: OutlineInputBorder()),
               ),
             ),
             const SizedBox(height: 30),
             const Text(
               'Password',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: TextField(
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
                 controller: passwordController,
-                decoration: const InputDecoration(border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                  fillColor: Colors.white,
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white)),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white)),
+                ),
               ),
             ),
             const SizedBox(height: 30),
             const Text(
               'MAC',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: TextField(
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
                 controller: macController,
-                decoration: const InputDecoration(border: OutlineInputBorder()),
+                decoration: const InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white)),
+                    border: OutlineInputBorder()),
               ),
             ),
             const SizedBox(height: 20),
             Text(error),
             const SizedBox(height: 20),
-            ElevatedButton(onPressed: addPage, child: const Text('Confirm'))
+            ElevatedButton(
+              onPressed: addPage,
+              child: const Text(
+                'CONFIRM',
+                style: TextStyle(
+                    fontSize: 15,
+                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero),
+                  primary: Colors.pink.shade900),
+            )
           ],
         ),
       ),

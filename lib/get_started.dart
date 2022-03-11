@@ -12,7 +12,7 @@ class GetStarted extends StatelessWidget {
         title: const Center(
           child: Text(
             'ADD APPLIANCE',
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           ),
         ),
       ),

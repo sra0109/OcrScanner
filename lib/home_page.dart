@@ -59,9 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Center(
+            child: Text(widget.title,
+                style: const TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold))),
         backgroundColor: Colors.black,
       ),
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -69,13 +73,26 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'Press scan button to start the scan',
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.white),
             ),
             const SizedBox(height: 30),
             const SizedBox(height: 30),
-            ElevatedButton(onPressed: _startScan, child: const Text('SCAN'))
+            ElevatedButton(
+              onPressed: _startScan,
+              child: const Text(
+                'SCAN',
+                style: TextStyle(
+                    fontSize: 15,
+                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero),
+                  primary: Colors.pink.shade900),
+            )
           ],
         ),
       ),

@@ -16,14 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'home',
       routes: {
-        'home': (context) => const MyHomePage(title: 'OCR_SCANNER'),
+        'home': (context) => const MyHomePage(title: 'SmartHQ'),
         'data': (context) => const DataContent()
       }, // providing routes
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
