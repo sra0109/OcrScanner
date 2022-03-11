@@ -24,7 +24,7 @@ class AddAppliance extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: const [
-          Image(image: AssetImage('assets/add1.jpg')),
+          Image(image: AssetImage('assets/add12.jpg')),
         ],
       ),
     );

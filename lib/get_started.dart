@@ -19,7 +19,7 @@ class GetStarted extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Column(
         children: const [
-          Image(image: AssetImage('assets/started1.jpg')),
+          Image(image: AssetImage('assets/started12.jpg')),
         ],
       ),
     );
