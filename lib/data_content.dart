@@ -1,5 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'package:ocr_scanner/add_appliance.dart';
+import 'package:ocr_scanner/get_started.dart';
+
+import 'add_appliance.dart';
 
 class DataContent extends StatefulWidget {
   const DataContent({Key? key}) : super(key: key);
@@ -36,12 +41,26 @@ class _DataContentState extends State<DataContent> {
     } catch (e) {
       error = "Error while scanning please scan again";
     }
-    void scanAgain() {
+    // void scanAgain() {
+    //   Navigator.push(
+    //       context,
+    //       MaterialPageRoute(
+    //         builder: (BuildContext context) =>
+    //             const MyHomePage(title: 'OCR_SCANNER'),
+    //       ));
+    // }
+    void addPage() {
+      Timer(const Duration(seconds: 20), () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => const GetStarted(),
+            ));
+      });
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) =>
-                const MyHomePage(title: 'OCR_SCANNER'),
+            builder: (BuildContext context) => const AddAppliance(),
           ));
     }
 
@@ -49,6 +68,7 @@ class _DataContentState extends State<DataContent> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Data Content Page'),
+        backgroundColor: Colors.black,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -95,7 +115,7 @@ class _DataContentState extends State<DataContent> {
             const SizedBox(height: 20),
             Text(error),
             const SizedBox(height: 20),
-            ElevatedButton(onPressed: scanAgain, child: const Text('Scan'))
+            ElevatedButton(onPressed: addPage, child: const Text('Confirm'))
           ],
         ),
       ),
